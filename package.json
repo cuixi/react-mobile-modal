@@ -1,5 +1,5 @@
 {
-  "name": "@music/mobile-modal",
+  "name": "wx-mobile-modal",
   "version": "0.1.0",
   "description": "A component",
   "author": "王伟民 <wangweimin@corp.netease.com>",
@@ -13,12 +13,12 @@
     "mobile"
   ],
   "bugs": {
-    "url": "https://g.hz.netease.com/wangweimin/react-modal/issues"
+    "url": "https://github.com/cuixi/react-mobile-modal/issues"
   },
-  "homepage": "https://g.hz.netease.com/wangweimin/react-modal",
+  "homepage": "https://github.com/cuixi/react-mobile-modal",
   "repository": {
     "type": "git",
-    "url": "https://g.hz.netease.com/wangweimin/react-modal.git"
+    "url": "https://github.com/cuixi/react-mobile-modal.git"
   },
   "scripts": {
     "dev": "webpack-dev-server --port 7909 --content-base demo/ --config demo/webpack.config.js --progress --hot --inline",
