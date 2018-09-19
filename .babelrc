@@ -1,0 +1,38 @@
+{
+  "presets": [
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "add-module-exports",
+    "transform-object-rest-spread",
+    "transform-class-properties"
+  ],
+  "env": {
+    "commonjs": {
+      "presets": [
+        ["env", {
+          "modules" : "commonjs"
+        }]
+      ],
+      "plugins": [
+        "add-module-exports"
+      ]
+    },
+    "es": {
+      "presets": [
+        ["env", {
+          "modules" : false
+        }]
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+          "modules" : "commonjs"
+        }]
+      ]
+    }
+  }
+}

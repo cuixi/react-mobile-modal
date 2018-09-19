@@ -1,0 +1,5 @@
+test:
+  stage: test
+  script:
+    - npm install --registry http://rnpm.hz.netease.com
+    - npm run test

@@ -1,0 +1,9 @@
+demo/
+test/
+src/
+.babelrc
+.eslintignore
+.eslintrc.js
+.gitattributes
+.gitignore
+.npmignore
