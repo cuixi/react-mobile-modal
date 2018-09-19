@@ -2,8 +2,8 @@ import _extends from 'babel-runtime/helpers/extends';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import Modal from './Modal.jsx';
-import ActionButton from './ActionButton.jsx';
+import Modal from './Modal';
+import ActionButton from './ActionButton';
 
 import './Confirm.less';
 

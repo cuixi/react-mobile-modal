@@ -1,6 +1,6 @@
 {
-  "name": "wx-mobile-modal",
-  "version": "0.1.0",
+  "name": "cx-mobile-modal",
+  "version": "0.1.3",
   "description": "A component",
   "author": "王伟民 <wangweimin@corp.netease.com>",
   "aliasName": {
@@ -9,8 +9,9 @@
   },
   "groupName": "UI-组件",
   "keywords": [
-    "music",
-    "mobile"
+    "react",
+    "mobile",
+    "modal"
   ],
   "bugs": {
     "url": "https://github.com/cuixi/react-mobile-modal/issues"

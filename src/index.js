@@ -1,4 +1,4 @@
-import confirm from './Confirm.jsx';
+import confirm from './Confirm';
 
 
 /**

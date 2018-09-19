@@ -18,11 +18,11 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Modal = require('./Modal.jsx');
+var _Modal = require('./Modal');
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _ActionButton = require('./ActionButton.jsx');
+var _ActionButton = require('./ActionButton');
 
 var _ActionButton2 = _interopRequireDefault(_ActionButton);
 

@@ -9,7 +9,7 @@ var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _Confirm = require('./Confirm.jsx');
+var _Confirm = require('./Confirm');
 
 var _Confirm2 = _interopRequireDefault(_Confirm);
 

@@ -32,7 +32,7 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _ModalPortal = require('./ModalPortal.jsx');
+var _ModalPortal = require('./ModalPortal');
 
 var _ModalPortal2 = _interopRequireDefault(_ModalPortal);
 

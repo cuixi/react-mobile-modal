@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import ModalPortal from './ModalPortal.jsx';
+import ModalPortal from './ModalPortal';
 import './Modal.less';
 
 // 判断是否react16

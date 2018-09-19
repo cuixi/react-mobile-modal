@@ -1,5 +1,5 @@
 import _extends from 'babel-runtime/helpers/extends';
-import confirm from './Confirm.jsx';
+import confirm from './Confirm';
 
 /**
  * message
