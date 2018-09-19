@@ -1,4 +1,5 @@
 'use strict';
+
 const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
@@ -48,7 +49,9 @@ const config = {
                         ],
                         plugins: [
                             'transform-runtime',
-                            'add-module-exports'
+                            'add-module-exports',
+                            'transform-object-rest-spread',
+                            'transform-class-properties'
                         ],
                         cacheDirectory: true
                     }

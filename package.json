@@ -27,7 +27,7 @@
     "js:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "test": "jest",
     "css:copy": "copyfiles -f ./src/*.less ./dist",
-    "css": "lessc ./src/index.less ./dist/index.css --autoprefix=\"IOS >= 8.0, Android >= 4.0\" --inline-urls",
+    "css": "lessc ./src/Modal.less ./dist/Modal.css --autoprefix=\"IOS >= 8.0, Android >= 4.0\" --inline-urls",
     "build": "npm run build:demo && npm run js:commonjs && npm run js:es && npm run css && npm run css:copy"
   },
   "devDependencies": {

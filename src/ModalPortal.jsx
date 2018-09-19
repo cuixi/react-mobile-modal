@@ -9,6 +9,12 @@ class ModalPortal extends Component {
         this.state = {
             isOpen: false
         };
+
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.shouldCloseOverlay = this.shouldCloseOverlay.bind(this);
+        this.combineClassName = this.combineClassName.bind(this);
+        this.showOpen = this.showOpen.bind(this);
     }
     componentDidMount() {
         const { isOpen } = this.props;
@@ -23,19 +29,19 @@ class ModalPortal extends Component {
     /**
      * 打开modal
      */
-    openModal = () => {
+    openModal() {
         this.setState({ isOpen: true });
     }
     /**
      * 关闭modal
      */
-    closeModal = () => {
+    closeModal() {
         this.setState({ isOpen: false });
     }
     /**
      * 判断蒙层是否能关闭
      */
-    shouldCloseOverlay = () => {
+    shouldCloseOverlay() {
         const { overlayClosable } = this.props;
         if (overlayClosable) {
             this.closeModal();
@@ -45,7 +51,7 @@ class ModalPortal extends Component {
      * 合并className
      * @param {String}  which   合并className的模块
      */
-    combineClassName = (which) => {
+    combineClassName(which) {
         const { basePrefixCls, prefixCls } = this.props;
         let classList = `ReactModal__${which}`;
 
@@ -59,7 +65,9 @@ class ModalPortal extends Component {
 
         return classList;
     }
-    showOpen = () => this.state.isOpen;
+    showOpen() {
+        return this.state.isOpen;
+    }
     render() {
         return this.showOpen() ? (
             <div className={this.combineClassName('Component')}>

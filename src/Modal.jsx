@@ -19,6 +19,9 @@ class Modal extends Component {
         const doc = window.document;
         this.node = doc.createElement('div');
         doc.body.appendChild(this.node);
+
+        this.removePortal = this.removePortal.bind(this);
+        this.renderPortal = this.renderPortal.bind(this);
     }
     componentDidMount() {
         if (!isReact16) {
@@ -33,13 +36,13 @@ class Modal extends Component {
     componentWillUnmount() {
         this.removePortal();
     }
-    removePortal = () => {
+    removePortal() {
         if (!isReact16) {
             ReactDOM.unmountComponentAtNode(this.node);
         }
         this.node.parentNode.removeChild(this.node);
     }
-    renderPortal = (props) => {
+    renderPortal(props) {
         createPortal(
             this,
             <ModalPortal {...props} />,

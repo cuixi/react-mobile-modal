@@ -9,8 +9,9 @@ class ActionButton extends Component {
         this.state = {
             loading: false
         };
+        this.onClick = this.onClick.bind(this);
     }
-    onClick = () => {
+    onClick() {
         const { actionFn, closeModal } = this.props;
         if (actionFn) {
             const ret = actionFn();

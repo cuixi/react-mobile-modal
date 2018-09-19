@@ -3,92 +3,52 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.Confirm = exports.Info = exports.Message = undefined;
 
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+var _extends2 = require('babel-runtime/helpers/extends');
 
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+var _extends3 = _interopRequireDefault(_extends2);
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+var _Confirm = require('./Confirm.jsx');
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _message = require('./message');
-
-var _message2 = _interopRequireDefault(_message);
+var _Confirm2 = _interopRequireDefault(_Confirm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Test = function (_Component) {
-    (0, _inherits3.default)(Test, _Component);
+/**
+ * message
+ * @param {Object} options
+ */
+var Message = exports.Message = function Message(options) {};
 
-    function Test(props) {
-        (0, _classCallCheck3.default)(this, Test);
-
-        var _this = (0, _possibleConstructorReturn3.default)(this, (Test.__proto__ || (0, _getPrototypeOf2.default)(Test)).call(this, props));
-
-        _this.state = {
-            clkey: ''
-        };
-        _this.clk = _this.clk.bind(_this);
-        return _this;
-    }
-
-    (0, _createClass3.default)(Test, [{
-        key: 'clk',
-        value: function clk() {
-            this.setState({
-                clkey: 'click'
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var clkey = this.state.clkey;
-            var _props = this.props,
-                name = _props.name,
-                title = _props.title;
-
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'div',
-                    { className: 'test', onClick: this.clk },
-                    'Hello ',
-                    name,
-                    ' ',
-                    clkey
-                ),
-                _react2.default.createElement(_message2.default, { title: title })
-            );
-        }
-    }]);
-    return Test;
-}(_react.Component);
-
-Test.propTypes = {
-    name: _propTypes2.default.string,
-    title: _propTypes2.default.string
+/**
+ * info
+ * @param {Object} options
+ */
+var Info = exports.Info = function Info(options) {
+    var config = (0, _extends3.default)({
+        showCloseBtn: true,
+        showCancelBtn: false,
+        showConfirmBtn: true
+    }, options);
+    return (0, _Confirm2.default)(config);
 };
-exports.default = Test;
-module.exports = exports['default'];
+
+/**
+ * confirm
+ * @param {Object} options
+ */
+var Confirm = exports.Confirm = function Confirm(options) {
+    var config = (0, _extends3.default)({
+        showCloseBtn: false,
+        showCancelBtn: true,
+        showConfirmBtn: true
+    }, options);
+    return (0, _Confirm2.default)(config);
+};
+
+exports.default = {
+    Message: Message,
+    Info: Info,
+    Confirm: Confirm
+};
